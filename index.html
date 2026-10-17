@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,28 +20,56 @@
     />
     <meta property="og:site_name" content="Your Business Name" />
     <title>Cost Estimate and Order Form</title>
+    <style>
+      #dynamic-floating-item {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 999999;
+        padding: 12px 24px;
+        border-radius: 8px;
+        background-color: #10b981;
+        color: #fff;
+        font-family: sans-serif;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 480px) {
+        #dynamic-floating-item {
+          right: 12px;
+          bottom: 12px;
+          padding: 10px 16px;
+        }
+      }
+    </style>
   </head>
   <body>
     <main>
       <iframe
         id="cost-estimate-and-order-form-jgsebk"
         title="Cost estimate and order form"
-        style="border: none; width: 100%; min-height: 1200px;"
+        style="border: none; width: 100%; min-height: 1200px"
         src="https://opnform.com/forms/cost-estimate-and-order-form-jgsebk"
         loading="lazy"
       ></iframe>
     </main>
+    <div id="dynamic-floating-item" role="status" aria-live="polite">
+      Form started!
+    </div>
 
     <script src="https://opnform.com/widgets/opnform-sdk.min.js"></script>
     <script>
-      // Optional: example for demonstration — remove or replace with your own handlers
-      // SDK auto-resizes iframe by default.
-      opnform.on("submit", function (data) {
-        console.log("Form submitted:", data);
-      });
+      opnform.on("page-change", (event) => {
+        const floatingElement = document.getElementById(
+          "dynamic-floating-item",
+        );
 
-      // More SDK methods: opnform.get('cost-estimate-and-order-form-jgsebk').setField(id, value)
-      // Docs: https://docs.opnform.com/embedding/javascript-sdk
+        if (event.currentPage === 1) {
+          floatingElement.textContent = "Page 1: Filling out basics...";
+        } else if (event.currentPage === 2) {
+          floatingElement.textContent = "Almost done! Page 2...";
+        }
+      });
     </script>
   </body>
 </html>
