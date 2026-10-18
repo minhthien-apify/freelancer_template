@@ -92,7 +92,7 @@
         // const order = Number(form.getField(orderFieldId)) || 0;
         // const quantity = Number(form.getField(quantityFieldId)) || 0;
 
-        console.log("hoho ",form.getField(total1Id)," huhu ",form.getField(total2Id))
+        // console.log("hoho ",form.getField(total1Id)," huhu ",form.getField(total2Id))
 
         // const total1Cost = Number(form.getField(total1Id)) || 0;
         // const total2Cost = Number(form.getField(total2Id)) || 0;
@@ -108,8 +108,33 @@
         // }
       }
 
+
       opnform.on("ready", updateEstimatedTotal);
-      opnform.on("dataChange", updateEstimatedTotal);
+      opnform.on("dataChange", (data) => {
+        console.log("Form data changed:", data);
+        updateEstimatedTotal();
+      });
+
+
+
+
+
+
+      // const formFrame = document.getElementById(
+      //   "cost-estimate-and-order-form-jgsebk",
+      // );
+      // window.addEventListener("message", (event) => {
+      //   if (
+      //     event.source !== formFrame.contentWindow ||
+      //     event.origin !== "https://opnform.com" ||
+      //     event.data?.type !== "form-submitted"
+      //   ) {
+      //     return;
+      //   }
+
+      //   console.log("Submission detected from form slug:", event.data.form?.slug);
+      //   console.log("Submission data:", event.data.submission_data);
+      // });
     </script>
     <!-- <script>
       opnform.on("submit", function (data) {
