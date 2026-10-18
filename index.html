@@ -22,23 +22,32 @@
     <title>Cost Estimate and Order Form</title>
     <style>
       #dynamic-floating-item {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        z-index: 999999;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        width: 100%;
         padding: 12px 24px;
-        border-radius: 8px;
         background-color: #10b981;
         color: #fff;
         font-family: sans-serif;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      #dynamic-floating-item button {
+        padding: 8px 16px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #047857;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 600;
       }
 
       @media (max-width: 480px) {
         #dynamic-floating-item {
-          right: 12px;
-          bottom: 12px;
-          padding: 10px 16px;
+          padding: 10px 12px;
         }
       }
     </style>
@@ -53,8 +62,11 @@
         loading="lazy"
       ></iframe>
     </main>
-    <div id="dynamic-floating-item" role="status" aria-live="polite">
-      Estimated total: $0.00
+    <div id="dynamic-floating-item">
+      <span id="floating-status" role="status" aria-live="polite">
+        Estimated total: $0.00
+      </span>
+      <button id="submit-form-button" type="button">Submit form</button>
     </div>
 
     <script src="https://opnform.com/widgets/opnform-sdk.min.js"></script>
@@ -64,15 +76,13 @@
       });
 
       opnform.on("pageChange", (event) => {
-        const floatingElement = document.getElementById(
-          "dynamic-floating-item",
-        );
+        const floatingStatus = document.getElementById("floating-status");
         console.log("detected page cahnge");
 
         if (event.currentPage === 1) {
-          floatingElement.textContent = "Page 1: Filling out basics...";
+          floatingStatus.textContent = "Page 1: Filling out basics...";
         } else if (event.currentPage === 2) {
-          floatingElement.textContent = "Almost done! Page 2...";
+          floatingStatus.textContent = "Almost done! Page 2...";
         }
       });
 
@@ -115,6 +125,17 @@
         updateEstimatedTotal();
       });
 
+      document
+        .getElementById("submit-form-button")
+        .addEventListener("click", () => {
+          const form = opnform.get(formSlug);
+          if (!form) {
+            console.error(`Unable to find OpnForm form "${formSlug}".`);
+            return;
+          }
+
+          form.submit();
+        });
 
 
 
