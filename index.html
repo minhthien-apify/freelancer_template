@@ -54,15 +54,20 @@
       ></iframe>
     </main>
     <div id="dynamic-floating-item" role="status" aria-live="polite">
-      Form started!
+      Estimated total: $0.00
     </div>
 
     <script src="https://opnform.com/widgets/opnform-sdk.min.js"></script>
     <script>
-      opnform.on("page-change", (event) => {
+      opnform.on("submit", function (data) {
+        console.log("Form submitted:", data);
+      });
+
+      opnform.on("pageChange", (event) => {
         const floatingElement = document.getElementById(
           "dynamic-floating-item",
         );
+        console.log("detected page cahnge");
 
         if (event.currentPage === 1) {
           floatingElement.textContent = "Page 1: Filling out basics...";
@@ -70,6 +75,59 @@
           floatingElement.textContent = "Almost done! Page 2...";
         }
       });
+
+      const formSlug = "cost-estimate-and-order-form-jgsebk";
+      const total1Id = "57be1b23-bd31-487e-a7e1-b78a4dbe732f";
+      const total2Id = "10528c87-4224-4af9-8cd0-d8d611ebb8d4";
+      const floatingElement = document.getElementById("dynamic-floating-item");
+      const currencyFormatter = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      });
+
+      function updateEstimatedTotal() {
+        const form = opnform.get(formSlug);
+        if (!form) return;
+
+        // const order = Number(form.getField(orderFieldId)) || 0;
+        // const quantity = Number(form.getField(quantityFieldId)) || 0;
+
+        console.log("hoho ",form.getField(total1Id)," huhu ",form.getField(total2Id))
+
+        // const total1Cost = Number(form.getField(total1Id)) || 0;
+        // const total2Cost = Number(form.getField(total2Id)) || 0;
+        // if (total1Cost == 0 || total2Cost == 0) {
+        //   console.log("Form still not complete");
+        //   console.log("hihi ",total1Cost," haha ",total2Cost)
+        //   console.log("hoho ",form.getField(total1Id)," huhu ",form.getField(total2Id))
+        //   return;
+        // } else {
+        //   floatingElement.textContent = `Estimated total: ${currencyFormatter.format(
+        //     total1Cost + total2Cost ,
+        //   )}`;
+        // }
+      }
+
+      opnform.on("ready", updateEstimatedTotal);
+      opnform.on("dataChange", updateEstimatedTotal);
     </script>
+    <!-- <script>
+      opnform.on("submit", function (data) {
+        console.log("Form submitted:", data);
+      });
+
+      opnform.on("pageChange", (event) => {
+        const floatingElement = document.getElementById(
+          "dynamic-floating-item",
+        );
+        console.log("detected page cahnge");
+
+        if (event.currentPage === 1) {
+          floatingElement.textContent = "Page 1: Filling out basics...";
+        } else if (event.currentPage === 2) {
+          floatingElement.textContent = "Almost done! Page 2...";
+        }
+      });
+    </script> -->
   </body>
 </html>
