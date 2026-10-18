@@ -118,7 +118,6 @@
         // }
       }
 
-
       opnform.on("ready", updateEstimatedTotal);
       opnform.on("dataChange", (data) => {
         console.log("Form data changed:", data);
@@ -127,19 +126,46 @@
 
       document
         .getElementById("submit-form-button")
+        // .addEventListener("click", async () => {
         .addEventListener("click", () => {
           const form = opnform.get(formSlug);
           if (!form) {
             console.error(`Unable to find OpnForm form "${formSlug}".`);
             return;
           }
+          const approvalFieldId = "d9e4aa98-8542-4830-807a-7a190618e184";
 
-          form.submit();
+          // set the iframe to get content but can not bypass the iframe cors
+
+          // // 1. Get the iframe element from the parent page
+          // const iframe = document.getElementById(formSlug);
+
+          // // 2. Access the document context inside the iframe
+          // const iframeDocument =
+          //   iframe.contentDocument || iframe.contentWindow.document;
+
+          // // 3. Get the specific element inside the iframe by its ID
+          // const targetElement =
+          //   iframeDocument.getElementById("b239a456-abc4-44d7-af2c-b8f00ce9922f");
+
+          // // Example usage: Modify the element
+          // // if (targetElement) {
+          // //   targetElement.style.color = "red";
+          // // }
+
+          // form.setField(approvalFieldId, "Aproved: " + targetElement.textContent);
+
+          form.setField(approvalFieldId, "Aproved");
+
+          try {
+            // await form.submit();
+            form.submit();
+          } catch (error) {
+            console.error("Form submission failed:", error);
+          } finally {
+            form.setField(approvalFieldId, "");
+          }
         });
-
-
-
-
 
       // const formFrame = document.getElementById(
       //   "cost-estimate-and-order-form-jgsebk",
