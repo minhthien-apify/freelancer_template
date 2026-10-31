@@ -21,13 +21,25 @@
     <meta property="og:site_name" content="Your Business Name" />
     <title>Cost Estimate and Order Form</title>
     <style>
+      main {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      #cost-estimate-and-order-form-jgsebk {
+        box-sizing: border-box;
+        flex: 0 0 65vw;
+        width: 65vw;
+      }
+
       #dynamic-floating-item {
         box-sizing: border-box;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex: 0 0 35vw;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 16px;
-        width: 100%;
+        width: 35vw;
         padding: 12px 24px;
         background-color: #10b981;
         color: #fff;
@@ -46,6 +58,16 @@
       }
 
       @media (max-width: 480px) {
+        main {
+          flex-direction: column;
+        }
+
+        #cost-estimate-and-order-form-jgsebk,
+        #dynamic-floating-item {
+          flex-basis: auto;
+          width: 100%;
+        }
+
         #dynamic-floating-item {
           padding: 10px 12px;
         }
@@ -57,17 +79,17 @@
       <iframe
         id="cost-estimate-and-order-form-jgsebk"
         title="Cost estimate and order form"
-        style="border: none; width: 100%; min-height: 1200px"
+        style="border: none; min-height: 1200px"
         src="https://opnform.com/forms/cost-estimate-and-order-form-jgsebk"
         loading="lazy"
       ></iframe>
+      <div id="dynamic-floating-item">
+        <span id="floating-status" role="status" aria-live="polite">
+          Estimated total: $0.00
+        </span>
+        <button id="submit-form-button" type="button">Submit form</button>
+      </div>
     </main>
-    <div id="dynamic-floating-item">
-      <span id="floating-status" role="status" aria-live="polite">
-        Estimated total: $0.00
-      </span>
-      <button id="submit-form-button" type="button">Submit form</button>
-    </div>
 
     <script src="https://opnform.com/widgets/opnform-sdk.min.js"></script>
     <script>
