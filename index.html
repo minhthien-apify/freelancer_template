@@ -57,6 +57,25 @@
         font-weight: 600;
       }
 
+      #store-query {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 4px;
+        font: inherit;
+      }
+
+      #store-results {
+        max-height: 320px;
+        overflow: auto;
+        padding-left: 20px;
+      }
+
+      #store-results li + li {
+        margin-top: 12px;
+      }
+
       @media (max-width: 480px) {
         main {
           flex-direction: column;
@@ -84,6 +103,16 @@
         loading="lazy"
       ></iframe>
       <div id="dynamic-floating-item">
+        <label for="store-query">Search the Apify Store</label>
+        <input
+          id="store-query"
+          type="search"
+          maxlength="200"
+          placeholder="For example, web scraper"
+        />
+        <button id="search-store-button" type="button">Search</button>
+        <span id="search-status" role="status" aria-live="polite"></span>
+        <ul id="store-results"></ul>
         <span id="floating-status" role="status" aria-live="polite">
           Estimated total: $0.00
         </span>
@@ -111,17 +140,66 @@
       const formSlug = "cost-estimate-and-order-form-jgsebk";
       const total1Id = "57be1b23-bd31-487e-a7e1-b78a4dbe732f";
       const total2Id = "10528c87-4224-4af9-8cd0-d8d611ebb8d4";
-      // hihi
       const floatingElement = document.getElementById("dynamic-floating-item");
       const currencyFormatter = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",
       });
 
+      const searchButton = document.getElementById("search-store-button");
+      const searchInput = document.getElementById("store-query");
+      const searchStatus = document.getElementById("search-status");
+      const searchResults = document.getElementById("store-results");
+
+      searchButton.addEventListener("click", async () => {
+        const query = searchInput.value.trim();
+        if (!query) {
+          searchStatus.textContent = "Enter a search query.";
+          return;
+        }
+
+        searchButton.disabled = true;
+        searchStatus.textContent = "Searching...";
+        searchResults.replaceChildren();
+
+        try {
+          const response = await fetch("http://localhost:5999/api/scrape", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ query }),
+          });
+          const data = await response.json();
+          if (!response.ok) {
+            throw new Error(data.error || "Search failed.");
+          }
+
+          for (const result of data.results) {
+            const item = document.createElement("li");
+            const title = document.createElement("strong");
+            title.textContent = result.title || result.name || "Untitled actor";
+            item.append(title);
+            if (result.username) {
+              item.append(document.createTextNode(` by ${result.username}`));
+            }
+            if (result.description) {
+              const description = document.createElement("div");
+              description.textContent = result.description;
+              item.append(description);
+            }
+            searchResults.append(item);
+          }
+
+          searchStatus.textContent = `${data.results.length} result(s) found.`;
+        } catch (error) {
+          searchStatus.textContent = error.message;
+        } finally {
+          searchButton.disabled = false;
+        }
+      });
+
       function updateEstimatedTotal() {
         const form = opnform.get(formSlug);
         if (!form) return;
-
       }
 
       opnform.on("ready", updateEstimatedTotal);
@@ -150,9 +228,6 @@
             await form.setField(approvalFieldId, "");
           }
         });
-
-
     </script>
-  
   </body>
 </html>
