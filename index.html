@@ -103,20 +103,38 @@
         loading="lazy"
       ></iframe>
       <div id="dynamic-floating-item">
-        <label for="store-query">Search the Apify Store</label>
-        <input
-          id="store-query"
-          type="search"
-          maxlength="200"
-          placeholder="For example, web scraper"
-        />
-        <button id="search-store-button" type="button">Search</button>
-        <span id="search-status" role="status" aria-live="polite"></span>
-        <ul id="store-results"></ul>
         <span id="floating-status" role="status" aria-live="polite">
           Estimated total: $0.00
         </span>
         <button id="submit-form-button" type="button">Submit form</button>
+        <hr
+          style="
+            align-self: stretch;
+            box-sizing: border-box;
+            width: 100%;
+            height: 2px;
+            background: repeating-linear-gradient(
+              90deg,
+              currentColor 0 3px,
+              transparent 3px 7px
+            );
+            border: 0;
+          "
+        />
+
+        <!-- <hr> -->
+        <label for="store-query"
+          >Search the Apify API for automation tasks</label
+        >
+        <input
+          id="store-query"
+          type="search"
+          maxlength="200"
+          placeholder="E.x: youtube, tiktok"
+        />
+        <button id="search-store-button" type="button">Search</button>
+        <span id="search-status" role="status" aria-live="polite"></span>
+        <ul id="store-results"></ul>
       </div>
     </main>
 
@@ -175,21 +193,60 @@
 
           for (const result of data.results) {
             const item = document.createElement("li");
+            const resultHeading = document.createElement("div");
+            resultHeading.style.display = "flex";
+            resultHeading.style.alignItems = "center";
+            resultHeading.style.gap = "8px";
+            const actorUrl = `https://apify.com/${encodeURIComponent(
+              result.username,
+            )}/${encodeURIComponent(result.name)}?fpr=2tkyk9`;
+            const imageLink = document.createElement("a");
+            imageLink.href = actorUrl;
+            imageLink.target = "_blank";
+            imageLink.rel = "noopener noreferrer";
+            const image = document.createElement("img");
+            image.src = result.pictureUrl;
+            image.alt = result.title || result.name || "Apify actor";
+            image.width = 20;
+            image.height = 20;
+            image.style.display = "block";
+            imageLink.append(image);
+            resultHeading.append(imageLink);
+
             const title = document.createElement("strong");
-            title.textContent = result.title || result.name || "Untitled actor";
-            item.append(title);
-            if (result.username) {
-              item.append(document.createTextNode(` by ${result.username}`));
-            }
+            const titleLink = document.createElement("a");
+            titleLink.href = actorUrl;
+            titleLink.target = "_blank";
+            titleLink.rel = "noopener noreferrer";
+            titleLink.textContent =
+              result.title || result.name || "Untitled actor";
+            title.append(titleLink);
+            resultHeading.append(title);
+            item.append(resultHeading);
+            // if (result.username) {
+            //   item.append(document.createTextNode(` by ${result.username}`));
+            // }
             if (result.description) {
               const description = document.createElement("div");
+              description.style.marginTop = "8px";
               description.textContent = result.description;
               item.append(description);
             }
             searchResults.append(item);
           }
 
-          searchStatus.textContent = `${data.results.length} result(s) found.`;
+          const storeLink = document.createElement("a");
+          storeLink.href = "https://apify.com/store?fpr=2tkyk9";
+          storeLink.target = "_blank";
+          storeLink.rel = "noopener noreferrer";
+          storeLink.textContent = "Apify Store";
+          searchStatus.replaceChildren(
+            document.createTextNode(
+              `${data.results.length} result(s) found. Find out more from `,
+            ),
+            storeLink,
+            document.createTextNode("."),
+          );
         } catch (error) {
           searchStatus.textContent = error.message;
         } finally {
