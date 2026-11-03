@@ -28,18 +28,19 @@
 
       #cost-estimate-and-order-form-jgsebk {
         box-sizing: border-box;
-        flex: 0 0 65vw;
-        width: 65vw;
+        flex: 0 0 65%;
+        width: 65%;
       }
 
       #dynamic-floating-item {
         box-sizing: border-box;
         display: flex;
-        flex: 0 0 35vw;
+        flex: 0 0 calc(35% - 16px);
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
-        width: 35vw;
+        width: calc(35% - 16px);
+        margin: 8px;
         padding: 12px 24px;
         background-color: #10b981;
         color: #fff;
@@ -55,6 +56,14 @@
         cursor: pointer;
         font: inherit;
         font-weight: 600;
+      }
+
+      #search-store-button:hover,
+      #search-store-button:focus-visible,
+      #submit-form-button:hover,
+      #submit-form-button:focus-visible {
+        background-color: #2563eb;
+        color: #fff;
       }
 
       #store-query {
@@ -81,13 +90,14 @@
           flex-direction: column;
         }
 
-        #cost-estimate-and-order-form-jgsebk,
-        #dynamic-floating-item {
+        #cost-estimate-and-order-form-jgsebk {
           flex-basis: auto;
           width: 100%;
         }
 
         #dynamic-floating-item {
+          flex-basis: auto;
+          width: calc(100% - 16px);
           padding: 10px 12px;
         }
       }
@@ -108,7 +118,6 @@
         </span>
         <button id="submit-form-button" type="button">Submit form</button>
 
-        <br/>
         <hr
           style="
             align-self: stretch;
@@ -147,8 +156,7 @@
             border: 0;
           "
         />
-        <br/>
-
+        <br />
 
         <!-- <hr> -->
         <label for="store-query"
