@@ -107,20 +107,48 @@
           Estimated total: $0.00
         </span>
         <button id="submit-form-button" type="button">Submit form</button>
+
+        <br/>
         <hr
           style="
             align-self: stretch;
+            color: inherit;
             box-sizing: border-box;
             width: 100%;
-            height: 2px;
-            background: repeating-linear-gradient(
-              90deg,
-              currentColor 0 3px,
-              transparent 3px 7px
-            );
+            height: 14px;
+            background-image:
+              radial-gradient(
+                circle at 50% 50%,
+                currentColor 0 1px,
+                transparent 1.5px
+              ),
+              radial-gradient(
+                circle at 50% 18%,
+                currentColor 0 2px,
+                transparent 2.5px
+              ),
+              radial-gradient(
+                circle at 50% 82%,
+                currentColor 0 2px,
+                transparent 2.5px
+              ),
+              radial-gradient(
+                circle at 20% 50%,
+                currentColor 0 2px,
+                transparent 2.5px
+              ),
+              radial-gradient(
+                circle at 80% 50%,
+                currentColor 0 2px,
+                transparent 2.5px
+              );
+            background-size: 18px 14px;
+            background-repeat: repeat-x;
             border: 0;
           "
         />
+        <br/>
+
 
         <!-- <hr> -->
         <label for="store-query"
