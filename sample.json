@@ -1,0 +1,2747 @@
+{
+    "results": [
+        {
+            "title": "TikTok Scraper",
+            "name": "tiktok-scraper",
+            "username": "clockworks",
+            "stats": {
+                "totalBuilds": 4028,
+                "totalRuns": 148076419,
+                "totalUsers": 377287,
+                "totalUsers7Days": 16293,
+                "totalUsers30Days": 32840,
+                "totalUsers90Days": 49334,
+                "lastRunStartedAt": "2026-11-02T20:25:46.118Z",
+                "totalMetamorphs": 15,
+                "publicActorRunStats30Days": {
+                    "ABORTED": 12509,
+                    "FAILED": 155835,
+                    "SUCCEEDED": 14507911,
+                    "TIMED-OUT": 94750,
+                    "TOTAL": 14771005
+                },
+                "actorReviewCount": 371,
+                "actorReviewRating": 4.74746170909339,
+                "bookmarkCount": 2303
+            },
+            "description": "Extract data from TikTok videos, hashtags, and users. Use URLs or search queries to scrape TikTok profiles, hashtags, posts, URLs, shares, followers, hearts, names, video, and music-related data. Export scraped data, run the scraper via API, schedule and monitor runs or integrate with other tools.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.amazonaws.com/GdWCkxBtKWOsKjdch/ztLG5hT3ZLhAFFeKN-TikTok_Scraper.png",
+            "notice": "NONE",
+            "userFullName": "Clockworks",
+            "userPictureUrl": "https://images.apifyusercontent.com/_nS9zDChp0rz6DbVMFBerCLGf4sWe9EVwvt8SJtEXbQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS84V3JkTVBpTDROcDJrZzdGQy9KcGZFRHFZeUg3V0Zld1kyQy1jbG9ja3dvcmtzLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": 0.5,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "result": {
+                            "eventTitle": "Result",
+                            "eventDescription": "Cost per result returned.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0037
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.003
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0023
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0017
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0005
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "filter-applied": {
+                            "eventTitle": "Add-on: Date filter",
+                            "eventDescription": "Extra cost when date filtering is used.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "popularity-filter-applied": {
+                            "eventTitle": "Add-on: Popularity filter",
+                            "eventDescription": "Extra cost when filtering by popularity is used.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "follower-dataset-item": {
+                            "eventTitle": "Add-on: Follower / Following",
+                            "eventDescription": "Extra cost per follower / following profile returned.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.004
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.003
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0015
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0005
+                                }
+                            }
+                        },
+                        "mobile-filter-sorting-applied": {
+                            "eventTitle": "Add-on: Search video sorting",
+                            "eventDescription": "Extra cost for scraping the sorted videos.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "video-download": {
+                            "eventTitle": "Add-on: video download",
+                            "eventDescription": "Extra cost when downloading video is enabled.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "comment-dataset-item": {
+                            "eventTitle": "Add-on: Comment",
+                            "eventDescription": "Extra cost per comment returned.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.00125
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00075
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0005
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00015
+                                }
+                            }
+                        },
+                        "scrape-as-in-country": {
+                            "eventTitle": "Add-on: Scrape as in country",
+                            "eventDescription": "Extra cost for scraping as if in a specific country.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "transcription-minute": {
+                            "eventTitle": "Add-on: Transcript",
+                            "eventDescription": "Extra cost charged per started minute per video.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.048
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.041
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.034
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.027
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.02
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.015
+                                }
+                            }
+                        },
+                        "ai-video-description": {
+                            "eventTitle": "Add-on: AI Description",
+                            "eventDescription": "Extra cost for timestamped AI description of a video per second.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0002
+                                }
+                            }
+                        },
+                        "ai-video-summary": {
+                            "eventTitle": "Add-on: AI Summary",
+                            "eventDescription": "Extra cost for AI summary of a video per second.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0002
+                                }
+                            }
+                        },
+                        "actor-start": {
+                            "eventTitle": "Actor start",
+                            "eventDescription": "Flat fee for starting an Actor run.",
+                            "isOneTimeEvent": true,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.001
+                                }
+                            }
+                        }
+                    }
+                },
+                "createdAt": "2026-08-18T07:19:07.761Z",
+                "startedAt": "2026-08-18T07:19:07.761Z",
+                "apifyMarginPercentage": 0.2,
+                "notifiedAboutChangeAt": "2026-08-19T08:06:30.611Z"
+            },
+            "objectID": "GdWCkxBtKWOsKjdch"
+        },
+        {
+            "title": "TikTok Comments Scraper",
+            "name": "tiktok-comments-scraper",
+            "username": "clockworks",
+            "stats": {
+                "totalBuilds": 3450,
+                "totalRuns": 19924536,
+                "totalUsers": 51728,
+                "totalUsers7Days": 2735,
+                "totalUsers30Days": 6211,
+                "totalUsers90Days": 10582,
+                "lastRunStartedAt": "2026-11-02T20:25:45.538Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 2133,
+                    "FAILED": 5928,
+                    "SUCCEEDED": 3020310,
+                    "TIMED-OUT": 1817,
+                    "TOTAL": 3030188
+                },
+                "actorReviewCount": 97,
+                "actorReviewRating": 4.729920890010625,
+                "bookmarkCount": 412
+            },
+            "description": "Extract TikTok comments. Just add a TikTok URL and get TikTok video and profile data: comments, URLs, numbers of shares, followers, hashtags, hearts, video, and music metadata. Export scraped data, run the scraper via API, schedule and monitor runs or integrate with other tools.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.amazonaws.com/BDec00yAmCm1QbMEI/qh2zfKvd59T2AcbpN-TikTok_Comments_Scraper.png",
+            "notice": "NONE",
+            "userFullName": "Clockworks",
+            "userPictureUrl": "https://images.apifyusercontent.com/_nS9zDChp0rz6DbVMFBerCLGf4sWe9EVwvt8SJtEXbQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS84V3JkTVBpTDROcDJrZzdGQy9KcGZFRHFZeUg3V0Zld1kyQy1jbG9ja3dvcmtzLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": true,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "result": {
+                            "eventTitle": "comment",
+                            "eventDescription": "Single comment in the default dataset.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.00125
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00075
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0005
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00015
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        }
+                    }
+                },
+                "createdAt": "2026-03-18T10:24:20.131Z",
+                "startedAt": "2026-03-18T10:24:20.131Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "BDec00yAmCm1QbMEI"
+        },
+        {
+            "title": "TikTok Profile Scraper",
+            "name": "tiktok-profile-scraper",
+            "username": "clockworks",
+            "stats": {
+                "totalBuilds": 3432,
+                "totalRuns": 19425081,
+                "totalUsers": 62139,
+                "totalUsers7Days": 4289,
+                "totalUsers30Days": 8533,
+                "totalUsers90Days": 14014,
+                "lastRunStartedAt": "2026-11-02T20:25:41.965Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 28737,
+                    "FAILED": 8021,
+                    "SUCCEEDED": 3239810,
+                    "TIMED-OUT": 1146,
+                    "TOTAL": 3277714
+                },
+                "actorReviewCount": 73,
+                "actorReviewRating": 4.727888445465453,
+                "bookmarkCount": 797
+            },
+            "description": "Extract data from TikTok profiles and videos they post. Get TikTok profile data, URLs, numbers of shares, followers, comments, hearts, video and music metadata. Export scraped data, run the scraper via API, schedule and monitor runs or integrate with other tools.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.amazonaws.com/0FXVyOXXEmdGcV88a/9wZJkBdd2tRh2rLLN-Tiktok_Profile_Scraper.png",
+            "notice": "NONE",
+            "userFullName": "Clockworks",
+            "userPictureUrl": "https://images.apifyusercontent.com/_nS9zDChp0rz6DbVMFBerCLGf4sWe9EVwvt8SJtEXbQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS84V3JkTVBpTDROcDJrZzdGQy9KcGZFRHFZeUg3V0Zld1kyQy1jbG9ja3dvcmtzLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": true,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "result": {
+                            "eventTitle": "Result",
+                            "eventDescription": "Single result in the default dataset.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.003
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0015
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0003
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "filter-applied": {
+                            "eventTitle": "Add-on: Date filter",
+                            "eventDescription": "Extra cost when date filtering is used.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "popularity-filter-applied": {
+                            "eventTitle": "Add-on: Popularity filter",
+                            "eventDescription": "Extra cost when filtering by popularity is used.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "follower-dataset-item": {
+                            "eventTitle": "Add-on: Follower / Following",
+                            "eventDescription": "Extra cost per follower / following profile returned.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.004
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.003
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0015
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0005
+                                }
+                            }
+                        },
+                        "comment-dataset-item": {
+                            "eventTitle": "Add-on: Comment",
+                            "eventDescription": "Extra cost per comment returned.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.00125
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00075
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0005
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00015
+                                }
+                            }
+                        },
+                        "video-download": {
+                            "eventTitle": "Add-on: video download",
+                            "eventDescription": "Extra cost when downloading video is enabled.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "transcription-minute": {
+                            "eventTitle": "Add-on: Transcript",
+                            "eventDescription": "Extra cost charged per started minute per video.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.048
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.041
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.034
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.027
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.02
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.015
+                                }
+                            }
+                        }
+                    }
+                },
+                "createdAt": "2026-06-29T13:41:06.643Z",
+                "startedAt": "2026-06-29T13:41:06.643Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "0FXVyOXXEmdGcV88a"
+        },
+        {
+            "title": "TikTok Data Extractor",
+            "name": "free-tiktok-scraper",
+            "username": "clockworks",
+            "stats": {
+                "totalBuilds": 3556,
+                "totalRuns": 36909236,
+                "totalUsers": 60849,
+                "totalUsers7Days": 1785,
+                "totalUsers30Days": 3194,
+                "totalUsers90Days": 5466,
+                "lastRunStartedAt": "2026-11-02T20:25:46.000Z",
+                "totalMetamorphs": 384637,
+                "publicActorRunStats30Days": {
+                    "ABORTED": 491,
+                    "FAILED": 8560,
+                    "SUCCEEDED": 2380211,
+                    "TIMED-OUT": 5813,
+                    "TOTAL": 2395075
+                },
+                "actorReviewCount": 74,
+                "actorReviewRating": 4.816619625095845,
+                "bookmarkCount": 847
+            },
+            "description": "Extract data about videos, users, and channels based on hashtags or scrape full user profiles including posts, total likes, name, nickname, numbers of comments, shares, followers, following, and more.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.amazonaws.com/OtzYfK1ndEGdwWFKQ/ytuixP5RtPzSaB7b7-Free_TikTok_Scraper.png",
+            "notice": "NONE",
+            "userFullName": "Clockworks",
+            "userPictureUrl": "https://images.apifyusercontent.com/_nS9zDChp0rz6DbVMFBerCLGf4sWe9EVwvt8SJtEXbQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS84V3JkTVBpTDROcDJrZzdGQy9KcGZFRHFZeUg3V0Zld1kyQy1jbG9ja3dvcmtzLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "result": {
+                            "eventTitle": "Result",
+                            "eventDescription": "Single result in the default dataset.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.003
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0015
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0003
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "filter-applied": {
+                            "eventTitle": "Add-on: Date filter",
+                            "eventDescription": "Extra cost when date filtering is used.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "popularity-filter-applied": {
+                            "eventTitle": "Add-on: Popularity filter",
+                            "eventDescription": "Extra cost when filtering by popularity is used.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "follower-dataset-item": {
+                            "eventTitle": "Add-on: Follower / Following",
+                            "eventDescription": "Extra cost per follower / following profile returned.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.004
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.003
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0015
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0005
+                                }
+                            }
+                        },
+                        "mobile-filter-sorting-applied": {
+                            "eventTitle": "Add-on: Search video sorting",
+                            "eventDescription": "Extra cost for scraping the sorted videos.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "video-download": {
+                            "eventTitle": "Add-on: Video download",
+                            "eventDescription": "Extra cost when downloading video is enabled.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "comment-dataset-item": {
+                            "eventTitle": "Add-on: Comment",
+                            "eventDescription": "Extra cost per comment returned.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.00125
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00075
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0005
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00015
+                                }
+                            }
+                        },
+                        "scrape-as-in-country": {
+                            "eventTitle": "Add-on: Scrape as in country",
+                            "eventDescription": "Extra cost for scraping as if in a specific country.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "transcription-minute": {
+                            "eventTitle": "Add-on: Transcript",
+                            "eventDescription": "Extra cost charged per started minute per video.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.048
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.041
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.034
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.027
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.02
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.015
+                                }
+                            }
+                        }
+                    }
+                },
+                "createdAt": "2026-06-29T14:26:35.423Z",
+                "startedAt": "2026-06-29T14:26:35.423Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "OtzYfK1ndEGdwWFKQ"
+        },
+        {
+            "title": "Tiktok Scraper (Pay Per Result)",
+            "name": "tiktok-scraper",
+            "username": "apidojo",
+            "stats": {
+                "totalBuilds": 1148,
+                "totalRuns": 17123582,
+                "totalUsers": 13414,
+                "totalUsers7Days": 1158,
+                "totalUsers30Days": 2186,
+                "totalUsers90Days": 4023,
+                "lastRunStartedAt": "2026-11-02T10:20:43.421Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 6651,
+                    "FAILED": 1184,
+                    "SUCCEEDED": 1874110,
+                    "TIMED-OUT": 375,
+                    "TOTAL": 1882320
+                },
+                "actorReviewCount": 30,
+                "actorReviewRating": 4.363701001404679,
+                "bookmarkCount": 367
+            },
+            "description": "Extract TikTok profiles, videos, hashtags, comments at 600 posts/sec. No proxy, 98% success rate. Scrape music, locations & user data with query builder. Export JSON/CSV, API integration. Perfect for influencer discovery, lead gen, market research. $0.30 per 1K posts.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "LEAD_GENERATION",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/5K30i8aFccKNF5ICs/N7aep7F9FnfIzX0jJ-tiktok.png",
+            "notice": "NONE",
+            "userFullName": "API Dojo",
+            "userPictureUrl": "https://images.apifyusercontent.com/mb80SFPbs3pog1Do1MkSJ2N8Cqr0wIKwbohkLlJgrmM/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vWGdpZmtoNDhqaTVBNTVCcFovMFU1SVhiSWpDbWhqR2NCYkEtYXBpZG9qby5wbmc.png",
+            "currentPricingInfo": {
+                "pricingModel": "PAY_PER_EVENT",
+                "createdAt": "2026-02-16T15:05:29.265Z",
+                "startedAt": "2026-02-16T15:05:29.265Z",
+                "apifyMarginPercentage": 0.2,
+                "isPriceChangeNotificationSuppressed": true,
+                "reasonForChange": "Migration from Pay Per Result to Pay Per Event with apify-default-dataset-item event",
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "apify-default-dataset-item": {
+                            "eventTitle": "post",
+                            "eventDescription": "Single post in the default dataset.",
+                            "isPrimaryEvent": true,
+                            "eventPriceUsd": 0.0003
+                        }
+                    }
+                },
+                "forceContainsSignificantPriceChange": false
+            },
+            "objectID": "5K30i8aFccKNF5ICs"
+        },
+        {
+            "title": "TikTok Hashtag Scraper",
+            "name": "tiktok-hashtag-scraper",
+            "username": "clockworks",
+            "stats": {
+                "totalBuilds": 3405,
+                "totalRuns": 838739,
+                "totalUsers": 20309,
+                "totalUsers7Days": 857,
+                "totalUsers30Days": 1948,
+                "totalUsers90Days": 3711,
+                "lastRunStartedAt": "2026-11-02T20:25:41.684Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 56,
+                    "FAILED": 19,
+                    "SUCCEEDED": 62210,
+                    "TIMED-OUT": 101,
+                    "TOTAL": 62386
+                },
+                "actorReviewCount": 30,
+                "actorReviewRating": 4.919965898768665,
+                "bookmarkCount": 177
+            },
+            "description": "Scrape TikTok hashtag data. Just add one or more hashtags and extract TikTok videos with that hashtag: URLs, likes, country of creation, video and music metadata, TikTok creator data. Export scraped data, run the scraper via API, schedule and monitor runs or integrate with other tools.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.amazonaws.com/f1ZeP0K58iwlqG2pY/v7FfuqmSGroMe7EGz-Tiktok_Hashtag_Scraper.png",
+            "notice": "NONE",
+            "userFullName": "Clockworks",
+            "userPictureUrl": "https://images.apifyusercontent.com/_nS9zDChp0rz6DbVMFBerCLGf4sWe9EVwvt8SJtEXbQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS84V3JkTVBpTDROcDJrZzdGQy9KcGZFRHFZeUg3V0Zld1kyQy1jbG9ja3dvcmtzLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": true,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "result": {
+                            "eventTitle": "Video",
+                            "eventDescription": "Single video in the default dataset.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.003
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0015
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0003
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "video-download": {
+                            "eventTitle": "Add-on: video download",
+                            "eventDescription": "Extra cost when downloading video is enabled.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "transcription-minute": {
+                            "eventTitle": "Add-on: Transcript",
+                            "eventDescription": "Extra cost charged per started minute per video.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.048
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.041
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.034
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.027
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.02
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.015
+                                }
+                            }
+                        }
+                    }
+                },
+                "createdAt": "2026-06-29T13:43:51.941Z",
+                "startedAt": "2026-06-29T13:43:51.941Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "f1ZeP0K58iwlqG2pY"
+        },
+        {
+            "title": "Tiktok Profile Scraper (Pay Per Result)",
+            "name": "tiktok-profile-scraper",
+            "username": "apidojo",
+            "stats": {
+                "totalBuilds": 920,
+                "totalRuns": 12916413,
+                "totalUsers": 6160,
+                "totalUsers7Days": 435,
+                "totalUsers30Days": 870,
+                "totalUsers90Days": 1762,
+                "lastRunStartedAt": "2026-11-02T10:22:05.419Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 220,
+                    "FAILED": 185,
+                    "SUCCEEDED": 1156466,
+                    "TIMED-OUT": 163,
+                    "TOTAL": 1157034
+                },
+                "actorReviewCount": 17,
+                "actorReviewRating": 4.418393817377629,
+                "bookmarkCount": 113
+            },
+            "description": "Scrape TikTok user profiles at 425 posts/sec with 98% success, no proxy needed. Get followers, bio, badges, full video history & engagement. Username or URL input. Export JSON/CSV, API ready. Perfect for influencer research, lead gen & brand deals. $0.30 per 1K posts.",
+            "categories": [
+                "LEAD_GENERATION",
+                "SOCIAL_MEDIA",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/ssOXktOBaQQiYfhc4/XMjM8ZPuGyRSic3d5-tiktok.png",
+            "notice": "NONE",
+            "userFullName": "API Dojo",
+            "userPictureUrl": "https://images.apifyusercontent.com/mb80SFPbs3pog1Do1MkSJ2N8Cqr0wIKwbohkLlJgrmM/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vWGdpZmtoNDhqaTVBNTVCcFovMFU1SVhiSWpDbWhqR2NCYkEtYXBpZG9qby5wbmc.png",
+            "currentPricingInfo": {
+                "pricingModel": "PAY_PER_EVENT",
+                "createdAt": "2026-02-16T15:05:29.262Z",
+                "startedAt": "2026-02-16T15:05:29.262Z",
+                "apifyMarginPercentage": 0.2,
+                "isPriceChangeNotificationSuppressed": true,
+                "reasonForChange": "Migration from Pay Per Result to Pay Per Event with apify-default-dataset-item event",
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "apify-default-dataset-item": {
+                            "eventTitle": "post",
+                            "eventDescription": "Single post in the default dataset.",
+                            "isPrimaryEvent": true,
+                            "eventPriceUsd": 0.0003
+                        }
+                    }
+                },
+                "forceContainsSignificantPriceChange": false
+            },
+            "objectID": "ssOXktOBaQQiYfhc4"
+        },
+        {
+            "title": "TikTok Video Scraper",
+            "name": "tiktok-video-scraper",
+            "username": "clockworks",
+            "stats": {
+                "totalBuilds": 3477,
+                "totalRuns": 5546275,
+                "totalUsers": 20446,
+                "totalUsers7Days": 1068,
+                "totalUsers30Days": 2683,
+                "totalUsers90Days": 3933,
+                "lastRunStartedAt": "2026-11-02T20:25:33.998Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 201,
+                    "FAILED": 2608,
+                    "SUCCEEDED": 788297,
+                    "TIMED-OUT": 342,
+                    "TOTAL": 791448
+                },
+                "actorReviewCount": 35,
+                "actorReviewRating": 4.601820535661636,
+                "bookmarkCount": 207
+            },
+            "description": "Scrape TikTok video metadata and details from any TikTok URL: views, likes, comments, shares, saves, captions, hashtags, music, upload date, and creator info. Add subtitles, AI transcripts, video downloads, and related videos. Use it for video analytics, trend research, and competitor tracking.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.amazonaws.com/S5h7zRLfKFEr8pdj7/pSFRGBkx2uwgmXbp9-Tiktok_Video_Scraper.png",
+            "notice": "NONE",
+            "userFullName": "Clockworks",
+            "userPictureUrl": "https://images.apifyusercontent.com/_nS9zDChp0rz6DbVMFBerCLGf4sWe9EVwvt8SJtEXbQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS84V3JkTVBpTDROcDJrZzdGQy9KcGZFRHFZeUg3V0Zld1kyQy1jbG9ja3dvcmtzLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": true,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "result": {
+                            "eventTitle": "Video",
+                            "eventDescription": "Single video in the default dataset.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.003
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0015
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0003
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "video-download": {
+                            "eventTitle": "Add-on: video download",
+                            "eventDescription": "Extra cost when downloading video is enabled.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0013
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00017
+                                }
+                            }
+                        },
+                        "transcription-minute": {
+                            "eventTitle": "Add-on: Transcript",
+                            "eventDescription": "Extra cost charged per started minute per video.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.048
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.041
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.034
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.027
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.02
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.015
+                                }
+                            }
+                        }
+                    }
+                },
+                "createdAt": "2026-06-29T13:46:48.700Z",
+                "startedAt": "2026-06-29T13:46:48.700Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "S5h7zRLfKFEr8pdj7"
+        },
+        {
+            "title": "Fast TikTok Scraper API | Influencer Data & Analytics API",
+            "name": "tiktok-scraper-api",
+            "username": "apidojo",
+            "stats": {
+                "totalBuilds": 317,
+                "totalRuns": 3034412,
+                "totalUsers": 1417,
+                "totalUsers7Days": 144,
+                "totalUsers30Days": 234,
+                "totalUsers90Days": 456,
+                "lastRunStartedAt": "2026-11-02T10:21:06.054Z",
+                "actorReviewCount": 8,
+                "actorReviewRating": 5,
+                "bookmarkCount": 35,
+                "publicActorRunStats30Days": {
+                    "ABORTED": 137,
+                    "FAILED": 6309,
+                    "SUCCEEDED": 491901,
+                    "TIMED-OUT": 21,
+                    "TOTAL": 498368
+                }
+            },
+            "description": "TikTok Scraper API - fast TikTok data extraction for videos, profiles, hashtags, music, locations and search. 200 posts/sec, 98% success rate. $0.006/query with 10-20 posts FREE, then $0.0003/post. No login, proxies or API keys needed; JSON/CSV output for analytics.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "DEVELOPER_TOOLS",
+                "LEAD_GENERATION"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/Xgifkh48ji5A55BpZ-actor-I9kHWwkx0b4giERt0-jzkpT4cCnS-N7aep7F9FnfIzX0jJ-tiktok.png",
+            "notice": "NONE",
+            "userFullName": "API Dojo",
+            "userPictureUrl": "https://images.apifyusercontent.com/mb80SFPbs3pog1Do1MkSJ2N8Cqr0wIKwbohkLlJgrmM/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vWGdpZmtoNDhqaTVBNTVCcFovMFU1SVhiSWpDbWhqR2NCYkEtYXBpZG9qby5wbmc.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "dataset-item": {
+                            "eventTitle": "TikTok Post Item",
+                            "eventDescription": "Charged for each post extracted beyond the free posts included per query.",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.0003,
+                            "isPrimaryEvent": true
+                        },
+                        "music-query": {
+                            "eventTitle": "TikTok Music/Sound Query",
+                            "eventDescription": "Charged when scraping posts using a specific song or sound, includes first 10 posts free.",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.003
+                        },
+                        "location-query": {
+                            "eventTitle": "TikTok Location Query",
+                            "eventDescription": "Charged when scraping posts from a TikTok location, includes first 20 posts free.",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.006
+                        },
+                        "search-query": {
+                            "eventTitle": "TikTok Search Query",
+                            "eventDescription": "Charged when performing a keyword search on TikTok, includes first 20 posts free.",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.006
+                        },
+                        "tag-query": {
+                            "eventTitle": "TikTok Hashtag/Tag Query",
+                            "eventDescription": "Charged when scraping posts by TikTok hashtag or tag, includes first 20 posts free.",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.006
+                        },
+                        "user-query": {
+                            "eventTitle": "TikTok User Profile Query",
+                            "eventDescription": "Charged when scraping a TikTok user profile, includes first 20 posts free.",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.006
+                        },
+                        "single-post-query": {
+                            "eventTitle": "TikTok Single Video Query",
+                            "eventDescription": "Charged when fetching a single TikTok video by URL, flat rate per video.",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.003
+                        }
+                    }
+                },
+                "startedAt": "2025-12-30T21:04:48.688Z",
+                "createdAt": "2025-12-30T21:04:50.506Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "I9kHWwkx0b4giERt0"
+        },
+        {
+            "title": "Tiktok Comments Scraper (Pay Per Result)",
+            "name": "tiktok-comments-scraper",
+            "username": "apidojo",
+            "stats": {
+                "totalBuilds": 1143,
+                "totalRuns": 8419010,
+                "totalUsers": 4342,
+                "totalUsers7Days": 327,
+                "totalUsers30Days": 747,
+                "totalUsers90Days": 1371,
+                "lastRunStartedAt": "2026-11-02T10:21:29.716Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 32,
+                    "FAILED": 1431,
+                    "SUCCEEDED": 460688,
+                    "TIMED-OUT": 25,
+                    "TOTAL": 462176
+                },
+                "actorReviewCount": 14,
+                "actorReviewRating": 4.952106352871252,
+                "bookmarkCount": 83
+            },
+            "description": "Extract TikTok comments at 100–200 comments/second. No proxy required. 98% success rate. Scrape text, likes, replies, and user data with simple URL input. Export to JSON/CSV, integrate via API. Ideal for influencer research, lead generation, and trend analysis. $0.30 per 1,000 comments.",
+            "categories": [
+                "SEO_TOOLS",
+                "VIDEOS",
+                "SOCIAL_MEDIA"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/XomSRf7d0qf3mVj1y/ZTcHSMctKH7CFKt0Q-tiktok.png",
+            "notice": "NONE",
+            "userFullName": "API Dojo",
+            "userPictureUrl": "https://images.apifyusercontent.com/mb80SFPbs3pog1Do1MkSJ2N8Cqr0wIKwbohkLlJgrmM/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vWGdpZmtoNDhqaTVBNTVCcFovMFU1SVhiSWpDbWhqR2NCYkEtYXBpZG9qby5wbmc.png",
+            "currentPricingInfo": {
+                "pricingModel": "PAY_PER_EVENT",
+                "createdAt": "2026-02-16T15:05:29.260Z",
+                "startedAt": "2026-02-16T15:05:29.260Z",
+                "apifyMarginPercentage": 0.2,
+                "isPriceChangeNotificationSuppressed": true,
+                "reasonForChange": "Migration from Pay Per Result to Pay Per Event with apify-default-dataset-item event",
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "apify-default-dataset-item": {
+                            "eventTitle": "comment",
+                            "eventDescription": "Single comment in the default dataset.",
+                            "isPrimaryEvent": true,
+                            "eventPriceUsd": 0.0003
+                        }
+                    }
+                },
+                "forceContainsSignificantPriceChange": false
+            },
+            "objectID": "XomSRf7d0qf3mVj1y"
+        },
+        {
+            "title": "TikTok Search Scraper: Keywords, Hashtags, Creators",
+            "name": "tiktok-search-scraper",
+            "username": "xmolodtsov",
+            "stats": {
+                "totalBuilds": 40,
+                "totalRuns": 1103259,
+                "totalUsers": 79015,
+                "totalUsers7Days": 540,
+                "totalUsers30Days": 1248,
+                "totalUsers90Days": 1894,
+                "lastRunStartedAt": "2026-11-02T10:20:34.786Z",
+                "actorReviewCount": 1,
+                "actorReviewRating": 5,
+                "bookmarkCount": 5,
+                "publicActorRunStats30Days": {
+                    "ABORTED": 89,
+                    "FAILED": 423,
+                    "SUCCEEDED": 48919,
+                    "TIMED-OUT": 22,
+                    "TOTAL": 49453
+                }
+            },
+            "description": "Scrape TikTok search results by keyword or hashtag and discover creators. Pay only per result. Views, likes, comments, shares, bookmarks, channel stats, music, subtitles and direct video URLs as JSON. Output compatible with popular TikTok scrapers. No proxies or login needed. Works via API and MCP.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "LEAD_GENERATION",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/CyEEJfR9YVNCY7S5b-actor-9ClZjZnyfJM6H05Uf-c2wEmZcttW-tiktok-search-scraper.png",
+            "notice": "NONE",
+            "userFullName": "GoFetch",
+            "userPictureUrl": "https://images.apifyusercontent.com/RmNoSN2zjE4YmhZFjSLkzlFaJ-E4aG3DAyVNoQKRxXs/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vQ3lFRUpmUjlZVk5DWTdTNWItcHJvZmlsZS1FSFR2OG1iTGF1LWdvZmV0Y2gtNTEyLnBuZw.png",
+            "currentPricingInfo": {
+                "pricingModel": "PAY_PER_EVENT",
+                "startedAt": "2026-10-30T15:00:00.000Z",
+                "reasonForChange": "New optional add-ons: video comments and creator profiles, each charged only when you turn it on. The price per TikTok post is unchanged on the Free, Starter, Scale and Business plans.",
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "apify-default-dataset-item": {
+                            "eventTitle": "TikTok post",
+                            "eventDescription": "One TikTok video returned in the dataset",
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00025
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00022
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0002
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0002
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0002
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "comment": {
+                            "eventTitle": "Add-on: comment",
+                            "eventDescription": "One comment or reply returned inside a video row (only when the comments add-on is on).",
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0004
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0004
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0004
+                                }
+                            }
+                        },
+                        "author-profile": {
+                            "eventTitle": "Add-on: author profile",
+                            "eventDescription": "One unique author profile returned (only when the author-profile add-on is on).",
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.00075
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.0007
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00065
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0006
+                                }
+                            }
+                        }
+                    }
+                },
+                "createdAt": "2026-10-15T20:02:11.588Z",
+                "apifyMarginPercentage": 0.2,
+                "notifiedAboutFutureChangeAt": "2026-10-16T00:12:28.528Z",
+                "notifiedAboutChangeAt": "2026-10-30T15:30:25.396Z"
+            },
+            "objectID": "9ClZjZnyfJM6H05Uf"
+        },
+        {
+            "title": "TikTok User Search Scraper",
+            "name": "tiktok-user-search-scraper",
+            "username": "clockworks",
+            "stats": {
+                "totalBuilds": 3012,
+                "totalRuns": 392361,
+                "totalUsers": 5260,
+                "totalUsers7Days": 168,
+                "totalUsers30Days": 488,
+                "totalUsers90Days": 980,
+                "lastRunStartedAt": "2026-11-02T20:25:43.456Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 1516,
+                    "FAILED": 14,
+                    "SUCCEEDED": 44464,
+                    "TIMED-OUT": 169,
+                    "TOTAL": 46163
+                },
+                "actorReviewCount": 13,
+                "actorReviewRating": 4.642293251323423,
+                "bookmarkCount": 39
+            },
+            "description": "Extract data about users based on TikTok user search. You'll get full user profiles, including name, nickname, \nsignature, number of followers, number of videos, bio link, and author’s ID.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/urbACh26VF8yHR72m/1s6h1rBq6wOcD5bxA-tt_user.png",
+            "notice": "NONE",
+            "userFullName": "Clockworks",
+            "userPictureUrl": "https://images.apifyusercontent.com/_nS9zDChp0rz6DbVMFBerCLGf4sWe9EVwvt8SJtEXbQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS84V3JkTVBpTDROcDJrZzdGQy9KcGZFRHFZeUg3V0Zld1kyQy1jbG9ja3dvcmtzLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": true,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "result": {
+                            "eventTitle": "profile",
+                            "eventDescription": "Single profile in the default dataset.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.006
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.005
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0038
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0025
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0014
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0008
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        }
+                    }
+                },
+                "createdAt": "2026-03-18T10:34:04.622Z",
+                "startedAt": "2026-03-18T10:34:04.622Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "urbACh26VF8yHR72m"
+        },
+        {
+            "title": "TikTok Followers Scraper",
+            "name": "tiktok-followers-scraper",
+            "username": "clockworks",
+            "stats": {
+                "totalBuilds": 2368,
+                "totalRuns": 219854,
+                "totalUsers": 13051,
+                "totalUsers7Days": 168,
+                "totalUsers30Days": 463,
+                "totalUsers90Days": 1090,
+                "lastRunStartedAt": "2026-11-02T20:24:00.561Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 72,
+                    "FAILED": 16,
+                    "SUCCEEDED": 25198,
+                    "TIMED-OUT": 85,
+                    "TOTAL": 25371
+                },
+                "actorReviewCount": 24,
+                "actorReviewRating": 4.720428665499472,
+                "bookmarkCount": 44
+            },
+            "description": "Scrape TikTok followers and following profiles from any account. Input a profile name, and get detailed lists of followers and following profiles with complete metadata. Perfect for lead generation, audience analysis, and segmentation.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS",
+                "LEAD_GENERATION"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/8WrdMPiL4Np2kg7FC-actor-i7JuI8WcwN94blNMb-PS0NohnXQz-TikTok_followers_Scraper.png",
+            "notice": "NONE",
+            "userFullName": "Clockworks",
+            "userPictureUrl": "https://images.apifyusercontent.com/_nS9zDChp0rz6DbVMFBerCLGf4sWe9EVwvt8SJtEXbQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS84V3JkTVBpTDROcDJrZzdGQy9KcGZFRHFZeUg3V0Zld1kyQy1jbG9ja3dvcmtzLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": true,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "result": {
+                            "eventTitle": "Follower / Following",
+                            "eventDescription": "Cost per Follower / Following profile returned.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0008
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0005
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "actor-start": {
+                            "eventTitle": "Actor start",
+                            "eventDescription": "Flat fee for starting an Actor run.",
+                            "isOneTimeEvent": true,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.001
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.001
+                                }
+                            }
+                        }
+                    }
+                },
+                "createdAt": "2026-03-05T08:45:07.848Z",
+                "startedAt": "2026-03-05T08:45:07.848Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "i7JuI8WcwN94blNMb"
+        },
+        {
+            "title": "TikTok Ad Library Spy & Creative Center Scraper",
+            "name": "tiktok-ad-library-scraper",
+            "username": "beyondops",
+            "stats": {
+                "totalBuilds": 6,
+                "totalRuns": 41725,
+                "totalUsers": 479,
+                "totalUsers7Days": 10,
+                "totalUsers30Days": 29,
+                "totalUsers90Days": 96,
+                "lastRunStartedAt": "2026-11-02T07:07:08.814Z",
+                "actorReviewCount": 1,
+                "actorReviewRating": 5,
+                "bookmarkCount": 3,
+                "publicActorRunStats30Days": {
+                    "ABORTED": 2,
+                    "FAILED": 1,
+                    "SUCCEEDED": 11222,
+                    "TIMED-OUT": 0,
+                    "TOTAL": 11225
+                }
+            },
+            "description": "Spy on competitor TikTok ads. Extract top-performing ad creatives, video URLs, CTR rankings, brand names, and budget data from TikTok Creative Center. Filter by country, industry, objective, and ad format. Export to JSON/CSV/Excel. No TikTok login required. Perfect for ad research & creative briefs.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "DEVELOPER_TOOLS",
+                "AUTOMATION"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/shTbhyKoqdVClazCM-actor-CyLT3XWY9qC9XVO6P-WLqujgbHY2-logo.svg.png",
+            "notice": "NONE",
+            "userFullName": "BeyondOps",
+            "userPictureUrl": "https://images.apifyusercontent.com/z1PROctTyc0ZHF58rqxZIYAI1lMaSLZ3PI4bJzOdn0Y/rs:fill:32:32/cb:1/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSXY0S3VjTFJGZVVnQlF5UGpxRlZkaWhVa2c1TUlqZXVGUERwLTdpYlE3NU9Sd2RVWT1zOTYtYw",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "apify-actor-start": {
+                            "eventTitle": "Actor Start",
+                            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                            "isOneTimeEvent": true,
+                            "eventPriceUsd": 0.00005
+                        },
+                        "apify-default-dataset-item": {
+                            "eventTitle": "result",
+                            "eventDescription": "Single result in the default dataset.",
+                            "eventPriceUsd": 0.00001,
+                            "isPrimaryEvent": true
+                        }
+                    }
+                },
+                "startedAt": "2026-02-24T13:04:02.006Z",
+                "createdAt": "2026-02-24T13:04:02.476Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "CyLT3XWY9qC9XVO6P"
+        },
+        {
+            "title": "Tiktok Shop Creators",
+            "name": "tiktok-shop-creators",
+            "username": "lemur",
+            "stats": {
+                "totalBuilds": 71,
+                "totalRuns": 6468214,
+                "totalUsers": 770,
+                "totalUsers7Days": 33,
+                "totalUsers30Days": 74,
+                "totalUsers90Days": 160,
+                "lastRunStartedAt": "2026-11-02T10:20:47.764Z",
+                "actorReviewCount": 6,
+                "actorReviewRating": 4.161557478932885,
+                "bookmarkCount": 25,
+                "publicActorRunStats30Days": {
+                    "ABORTED": 0,
+                    "FAILED": 53980,
+                    "SUCCEEDED": 555654,
+                    "TIMED-OUT": 4,
+                    "TOTAL": 609638
+                }
+            },
+            "description": "TikTok Shop Creators - Gain powerful insights into TikTok Shop creators — their performance (GMV, units sold, engagement), audience, and content trends — all in one request.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "DEVELOPER_TOOLS",
+                "ECOMMERCE"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/1Ej1YQpxnYmmwJzHU-actor-7WXZyKLZvyOPbf5Ih-tLqa5HOlRH-tts-logo.png",
+            "notice": "NONE",
+            "userFullName": "Lemur",
+            "userPictureUrl": "https://images.apifyusercontent.com/0vfFsUTyWEhxQwaZtEOrCAsBLCLznWOWndwJNPxLXeU/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vMUVqMVlRcHhuWW1td0p6SFUtcHJvZmlsZS1KRGZCZEdQZmZLLWxlbXVyLmpwZw.jpg",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": 0.005,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "apify-actor-start": {
+                            "eventTitle": "Actor run",
+                            "eventDescription": "Charged when the actor runs",
+                            "eventPriceUsd": 0.005,
+                            "isOneTimeEvent": true,
+                            "isPrimaryEvent": true
+                        }
+                    }
+                },
+                "startedAt": "2026-04-19T15:18:32.153Z",
+                "createdAt": "2026-04-19T15:18:32.153Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "7WXZyKLZvyOPbf5Ih"
+        },
+        {
+            "title": "Fast TikTok API (free-watermark videos)",
+            "name": "fast-tiktok-api",
+            "username": "novi",
+            "stats": {
+                "totalBuilds": 196,
+                "totalRuns": 27449472,
+                "totalUsers": 2324,
+                "totalUsers7Days": 51,
+                "totalUsers30Days": 93,
+                "totalUsers90Days": 132,
+                "lastRunStartedAt": "2026-11-02T10:20:33.442Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 131,
+                    "FAILED": 7663,
+                    "SUCCEEDED": 403592,
+                    "TIMED-OUT": 20,
+                    "TOTAL": 411406
+                },
+                "actorReviewCount": 6,
+                "actorReviewRating": 4.877456285824301,
+                "bookmarkCount": 57
+            },
+            "description": "Fastest TikTok API for Trend, Hashtag, Search, Music, User, Comment. Real-time, authentic data. No pre-built databases. Provides no-watermark video download links.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS",
+                "LEAD_GENERATION"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/sKsmPadCt6s5fagAi-actor-nCNiU9QG1e0nMwgWj-qYCjXaQIGo-Gemini_Generated_Image_a8cv8pa8cv8pa8cv.png",
+            "notice": "NONE",
+            "userFullName": "Novi",
+            "userPictureUrl": "https://images.apifyusercontent.com/3Ipzu3zWhKrAcjcsicovSNtsj0qQ1uZMXlSu345zbl4/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vc0tzbVBhZEN0NnM1ZmFnQWktcHJvZmlsZS0xYTg5WWwwZE9DLUdlbWluaV9HZW5lcmF0ZWRfSW1hZ2VfbnRxdGt2bnRxdGt2bnRxdC5qcGVn.jpeg",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "start": {
+                            "eventTitle": "Actor Start",
+                            "eventDescription": "Actor Start",
+                            "isOneTimeEvent": true,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.00023
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00022
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00021
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0002
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0002
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0002
+                                }
+                            }
+                        },
+                        "result-item": {
+                            "eventTitle": "Each video",
+                            "eventDescription": "Each video",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0004
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00037
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00033
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0003
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "single-video-query": {
+                            "eventTitle": "Single video fetch",
+                            "eventDescription": "Each video when scrape by video URL",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0025
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00233
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00217
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.002
+                                }
+                            }
+                        }
+                    }
+                },
+                "startedAt": "2026-08-28T18:25:44.653Z",
+                "createdAt": "2026-08-14T18:25:46.042Z",
+                "apifyMarginPercentage": 0.2,
+                "notifiedAboutFutureChangeAt": "2026-08-14T18:26:07.623Z",
+                "notifiedAboutChangeAt": "2026-08-28T18:35:52.241Z"
+            },
+            "objectID": "nCNiU9QG1e0nMwgWj"
+        },
+        {
+            "title": "TikTok Posts Scraper",
+            "name": "tiktok-posts",
+            "username": "scrapeforge",
+            "stats": {
+                "totalBuilds": 20,
+                "totalRuns": 3378054,
+                "totalUsers": 2178,
+                "totalUsers7Days": 109,
+                "totalUsers30Days": 233,
+                "totalUsers90Days": 583,
+                "lastRunStartedAt": "2026-11-02T10:22:00.959Z",
+                "actorReviewCount": 3,
+                "actorReviewRating": 4.999999999999999,
+                "bookmarkCount": 17,
+                "publicActorRunStats30Days": {
+                    "ABORTED": 73,
+                    "FAILED": 66,
+                    "SUCCEEDED": 527227,
+                    "TIMED-OUT": 63,
+                    "TOTAL": 527429
+                }
+            },
+            "description": "Scrape TikTok posts, video metadata, and engagement data from profiles, hashtags, or keyword searches. Fast bulk extraction with sorting, date filters, and region targeting. Export to JSON, CSV, or Excel.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS",
+                "AUTOMATION"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/cMvAGBg74nS9OOJw0-actor-wVJo1lJBw0WIxslPI-1YchP2FecI-icon.png",
+            "notice": "NONE",
+            "userFullName": "ScrapeForge",
+            "userPictureUrl": "https://images.apifyusercontent.com/p4XgmljqFIhwzPXP3s2SoSa7Fn3h_4xDl2L37IhDfgU/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vY012QUdCZzc0blM5T09KdzAtcHJvZmlsZS1TTFl5S0k3Rzh3LWhmXzIwMjYwNzA3XzIwMTMwN18wODUwYWRmYS0zNDMzLTRiMzItYjY5Ni1lZGYxMjlkNDg0YjMuc3ZnLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": 0.05,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "apify-actor-start": {
+                            "eventTitle": "Actor Start",
+                            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                            "isOneTimeEvent": true,
+                            "eventPriceUsd": 0.00005
+                        },
+                        "apify-default-dataset-item": {
+                            "eventTitle": "result",
+                            "eventDescription": "Single result in the default dataset.",
+                            "eventPriceUsd": 0.0003,
+                            "isPrimaryEvent": true
+                        }
+                    }
+                },
+                "startedAt": "2026-03-20T13:46:21.026Z",
+                "createdAt": "2026-03-20T13:46:21.573Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "wVJo1lJBw0WIxslPI"
+        },
+        {
+            "title": "Full TikTok API Scraper",
+            "name": "tiktok-api",
+            "username": "scraptik",
+            "stats": {
+                "totalBuilds": 51,
+                "totalRuns": 15626462,
+                "totalUsers": 5632,
+                "totalUsers7Days": 847,
+                "totalUsers30Days": 1169,
+                "totalUsers90Days": 1478,
+                "lastRunStartedAt": "2026-11-02T10:21:47.440Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 964,
+                    "FAILED": 0,
+                    "SUCCEEDED": 1951078,
+                    "TIMED-OUT": 1372,
+                    "TOTAL": 1953414
+                },
+                "actorReviewCount": 17,
+                "actorReviewRating": 4.444289639773795,
+                "bookmarkCount": 102
+            },
+            "description": "Apify’s LOWEST-COST TikTok Scraper ($0.002/request). Access the TikTok mobile API for user, posts, sounds, search, comments, followers, and more. Unlock TikTok data at scale. Have custom needs? Visit scraptik.com to get in touch.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/WBHJM6otJGm4AagQR-actor-naqsZgh7DhGajnD5z-Pn0WQSvpuv-CleanShot_2025-08-05_at_15.38.56_2x.png",
+            "notice": "NONE",
+            "userFullName": "ScrapTik",
+            "userPictureUrl": "https://images.apifyusercontent.com/ndda0qh64lpglkD7yaPNQflyIF2srwnXJvahUy112Ew/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vV0JISk02b3RKR200QWFnUVItcHJvZmlsZS05VnRKd2dGRVpnLWxvZ28tY29sb3JlZC5wbmc.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "reasonForChange": "Pricing is increasing to help with costs from Apify compute. If this is an issue for your needs, please fill out the form at scraptik.com",
+                "startedAt": "2026-01-01T18:58:18.148Z",
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "request": {
+                            "eventTitle": "request",
+                            "eventDescription": "price per request made to each endpoint",
+                            "eventPriceUsd": 0.002,
+                            "isPrimaryEvent": true
+                        }
+                    }
+                },
+                "createdAt": "2026-01-01T18:58:18.148Z",
+                "apifyMarginPercentage": 0.2,
+                "notifiedAboutFutureChangeAt": "2025-08-05T13:31:03.389Z",
+                "notifiedAboutChangeAt": "2025-08-19T00:05:17.670Z"
+            },
+            "objectID": "naqsZgh7DhGajnD5z"
+        },
+        {
+            "title": "Fast TikTok Profile Scraper API",
+            "name": "tiktok-profile-scraper-api",
+            "username": "apidojo",
+            "stats": {
+                "totalBuilds": 320,
+                "totalRuns": 897472,
+                "totalUsers": 1016,
+                "totalUsers7Days": 53,
+                "totalUsers30Days": 142,
+                "totalUsers90Days": 378,
+                "lastRunStartedAt": "2026-11-02T10:20:00.758Z",
+                "actorReviewCount": 7,
+                "actorReviewRating": 5,
+                "bookmarkCount": 15,
+                "publicActorRunStats30Days": {
+                    "ABORTED": 2,
+                    "FAILED": 30,
+                    "SUCCEEDED": 62766,
+                    "TIMED-OUT": 2,
+                    "TOTAL": 62800
+                }
+            },
+            "description": "TikTok Profile Scraper API - extract complete creator profiles, follower stats, and post history at 200 posts/sec. $0.006/profile (20 posts FREE) + $0.0003/post. No login or proxies, ideal for influencer research, competitor tracking, talent scouting, and building TikTok creator databases at scale.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "LEAD_GENERATION",
+                "OTHER"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/Xgifkh48ji5A55BpZ-actor-cAs6ecW9ckm8v9vPY-BFoSoSFhkc-N7aep7F9FnfIzX0jJ-tiktok.png",
+            "notice": "NONE",
+            "userFullName": "API Dojo",
+            "userPictureUrl": "https://images.apifyusercontent.com/mb80SFPbs3pog1Do1MkSJ2N8Cqr0wIKwbohkLlJgrmM/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vWGdpZmtoNDhqaTVBNTVCcFovMFU1SVhiSWpDbWhqR2NCYkEtYXBpZG9qby5wbmc.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "dataset-item": {
+                            "eventTitle": "TikTok Profile Post Item",
+                            "eventDescription": "Charged for each post extracted beyond the free 20 posts included per profile.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0003
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "list-query": {
+                            "eventTitle": "TikTok Profile Query",
+                            "eventDescription": "Charged when scraping a TikTok user profile, includes first 20 posts free.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.006
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.006
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.006
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.006
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.006
+                                }
+                            }
+                        }
+                    }
+                },
+                "startedAt": "2026-01-07T15:35:29.841Z",
+                "createdAt": "2026-01-07T15:35:30.219Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "cAs6ecW9ckm8v9vPY"
+        },
+        {
+            "title": "TikTok Ads Scraper",
+            "name": "tiktok-ads-scraper",
+            "username": "lexis-solutions",
+            "stats": {
+                "totalBuilds": 51,
+                "totalRuns": 256988,
+                "totalUsers": 1416,
+                "totalUsers7Days": 107,
+                "totalUsers30Days": 234,
+                "totalUsers90Days": 475,
+                "lastRunStartedAt": "2026-11-02T10:20:40.327Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 612,
+                    "FAILED": 4,
+                    "SUCCEEDED": 34419,
+                    "TIMED-OUT": 795,
+                    "TOTAL": 35830
+                },
+                "actorReviewCount": 18,
+                "actorReviewRating": 4.922003417330229,
+                "bookmarkCount": 66
+            },
+            "description": "Find and scrape current and past ads on TikTok. Get video URL, dates and locations, impressions, and more. Download and analyze data from the TikTok Ads Library for competitive analysis.",
+            "categories": [
+                "SOCIAL_MEDIA"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/60AtqWgevwexQsFPw/f2yjZ8hGfuNdE8C3w-tiktok-ads.png",
+            "notice": "NONE",
+            "userFullName": "Lexis Solutions",
+            "userPictureUrl": "https://images.apifyusercontent.com/YDmRDLNsmOb7is8GDDwmu1vbpd1YmS-8gnqdaszYkbE/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS9EZXZia1kzYWRNVEJ1b0VDdC9IQUVBTmppNDNwSEpmRGZiYS1sb2dvLWdyYWRpZW50LmpwZw.jpg",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "isPPEPlatformUsagePaidByUser": true,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "reasonForChange": "The actor's price is temporarily changing to PPE + usage due to high running costs. During this time, users will be billed for their Apify usage (as they were under the rental model), while paying a cheaper dev support fee per ad.",
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "apify-default-dataset-item": {
+                            "eventTitle": "Ad",
+                            "eventDescription": "Single result in the default dataset.",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.00049,
+                            "isPrimaryEvent": true
+                        },
+                        "apify-actor-start": {
+                            "eventTitle": "Actor Start",
+                            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                            "isOneTimeEvent": true,
+                            "eventPriceUsd": 0.00001
+                        }
+                    }
+                },
+                "startedAt": "2026-07-22T03:54:36.984Z",
+                "createdAt": "2026-07-08T03:54:37.718Z",
+                "apifyMarginPercentage": 0.2,
+                "notifiedAboutFutureChangeAt": "2026-07-08T03:54:58.820Z",
+                "notifiedAboutChangeAt": "2026-07-22T04:05:41.691Z"
+            },
+            "objectID": "60AtqWgevwexQsFPw"
+        },
+        {
+            "title": "TikTok Comments Extractor",
+            "name": "tiktok-comments-extractor",
+            "username": "scrapeforge",
+            "stats": {
+                "totalBuilds": 31,
+                "totalRuns": 293465,
+                "totalUsers": 427,
+                "totalUsers7Days": 17,
+                "totalUsers30Days": 60,
+                "totalUsers90Days": 124,
+                "lastRunStartedAt": "2026-11-02T09:25:34.767Z",
+                "actorReviewCount": 2,
+                "actorReviewRating": 4.699776236037088,
+                "bookmarkCount": 4,
+                "publicActorRunStats30Days": {
+                    "ABORTED": 11,
+                    "FAILED": 0,
+                    "SUCCEEDED": 4862,
+                    "TIMED-OUT": 111,
+                    "TOTAL": 4984
+                }
+            },
+            "description": "Extract comments, replies, and user data from any TikTok video or profile. Fast, reliable, and low-bandwidth — scrapes ~400 comments in under 40 seconds. Export to JSON, CSV, or Excel.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS",
+                "AUTOMATION"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/cMvAGBg74nS9OOJw0-actor-Btqk3GeGeTJMlMz0R-7nigQT95hV-icon.png",
+            "notice": "NONE",
+            "userFullName": "ScrapeForge",
+            "userPictureUrl": "https://images.apifyusercontent.com/p4XgmljqFIhwzPXP3s2SoSa7Fn3h_4xDl2L37IhDfgU/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vY012QUdCZzc0blM5T09KdzAtcHJvZmlsZS1TTFl5S0k3Rzh3LWhmXzIwMjYwNzA3XzIwMTMwN18wODUwYWRmYS0zNDMzLTRiMzItYjY5Ni1lZGYxMjlkNDg0YjMuc3ZnLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "apify-actor-start": {
+                            "eventTitle": "Actor Start",
+                            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                            "isOneTimeEvent": true,
+                            "eventPriceUsd": 0.00005
+                        },
+                        "apify-default-dataset-item": {
+                            "eventTitle": "result",
+                            "eventDescription": "Single result in the default dataset.",
+                            "eventPriceUsd": 0.0005,
+                            "isPrimaryEvent": true
+                        }
+                    }
+                },
+                "startedAt": "2026-03-15T20:57:41.953Z",
+                "createdAt": "2026-03-15T20:57:42.821Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "Btqk3GeGeTJMlMz0R"
+        },
+        {
+            "title": "TikTok Sound Scraper",
+            "name": "tiktok-sound-scraper",
+            "username": "clockworks",
+            "stats": {
+                "totalBuilds": 3375,
+                "totalRuns": 254307,
+                "totalUsers": 2498,
+                "totalUsers7Days": 136,
+                "totalUsers30Days": 264,
+                "totalUsers90Days": 414,
+                "lastRunStartedAt": "2026-11-02T20:20:12.659Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 185,
+                    "FAILED": 933,
+                    "SUCCEEDED": 16349,
+                    "TIMED-OUT": 25,
+                    "TOTAL": 17492
+                },
+                "actorReviewCount": 10,
+                "actorReviewRating": 4.999999999999999,
+                "bookmarkCount": 37
+            },
+            "description": "Scrape TikTok videos with a chosen sound. Just add one or more sound URLs and extract tiktoks that have it: URLs, likes, country of creation, video and music metadata, creator data. Export scraped data, run the scraper via API, schedule and monitor runs or integrate with other tools.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.amazonaws.com/JVisUAY6oGn2dBn99/CrSegRfw2SQ3Es72F-Tiktok_Sound_Scraper.png",
+            "notice": "NONE",
+            "userFullName": "Clockworks",
+            "userPictureUrl": "https://images.apifyusercontent.com/_nS9zDChp0rz6DbVMFBerCLGf4sWe9EVwvt8SJtEXbQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS84V3JkTVBpTDROcDJrZzdGQy9KcGZFRHFZeUg3V0Zld1kyQy1jbG9ja3dvcmtzLnBuZw.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": true,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "result": {
+                            "eventTitle": "video",
+                            "eventDescription": "Single video in the default dataset.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.005
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.004
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.003
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0011
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0006
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "transcription-minute": {
+                            "eventTitle": "Add-on: Transcript",
+                            "eventDescription": "Extra cost charged per started minute per video.",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.048
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.041
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.034
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.027
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.02
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.015
+                                }
+                            }
+                        }
+                    }
+                },
+                "createdAt": "2026-04-29T08:47:29.963Z",
+                "startedAt": "2026-04-29T08:47:29.963Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "JVisUAY6oGn2dBn99"
+        },
+        {
+            "title": "TikTok User Scraper",
+            "name": "tiktok-user-scraper",
+            "username": "apidojo",
+            "stats": {
+                "totalBuilds": 1106,
+                "totalRuns": 1444389,
+                "totalUsers": 1772,
+                "totalUsers7Days": 43,
+                "totalUsers30Days": 97,
+                "totalUsers90Days": 207,
+                "lastRunStartedAt": "2026-11-02T10:08:24.876Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 12,
+                    "FAILED": 33,
+                    "SUCCEEDED": 11289,
+                    "TIMED-OUT": 0,
+                    "TOTAL": 11334
+                },
+                "actorReviewCount": 9,
+                "actorReviewRating": 5,
+                "bookmarkCount": 52
+            },
+            "description": "Scrape TikTok users at 425/sec with 98% success—no proxy needed. Extract usernames, bios, followers, verification, engagement & account stats. Supports username/URL input. Export JSON/CSV with API integration. Ideal for influencer research, lead gen & brand partnerships.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "LEAD_GENERATION",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/nZqIUKyoBelvbSn1g/7mKXLax9SaC4gnuKQ-tiktok.png",
+            "notice": "NONE",
+            "userFullName": "API Dojo",
+            "userPictureUrl": "https://images.apifyusercontent.com/mb80SFPbs3pog1Do1MkSJ2N8Cqr0wIKwbohkLlJgrmM/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vWGdpZmtoNDhqaTVBNTVCcFovMFU1SVhiSWpDbWhqR2NCYkEtYXBpZG9qby5wbmc.png",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": null,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "reasonForChange": "Hello! Apify is deprecating Pay per Result, so we're switching this actor to Pay per Event. In 15 days, billing will be per event (not per extracted result). This keeps the actor stable and lets us keep improving it.",
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "dataset-item": {
+                            "eventTitle": "Dataset Item",
+                            "eventDescription": "Charged per user returned in results",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.0005,
+                            "isPrimaryEvent": true
+                        },
+                        "follower-query": {
+                            "eventTitle": "Follower Query",
+                            "eventDescription": "Extract followers from a TikTok profile",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.005
+                        },
+                        "following-query": {
+                            "eventTitle": "Following Query",
+                            "eventDescription": "Extract accounts followed by a TikTok profile",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.005
+                        },
+                        "user-query": {
+                            "eventTitle": "User Query",
+                            "eventDescription": "Extract profile data from a TikTok user URL",
+                            "isOneTimeEvent": false,
+                            "eventPriceUsd": 0.005
+                        }
+                    }
+                },
+                "startedAt": "2026-03-03T14:24:19.146Z",
+                "createdAt": "2026-02-17T14:24:20.415Z",
+                "apifyMarginPercentage": 0.2,
+                "notifiedAboutFutureChangeAt": "2026-02-17T14:24:42.232Z"
+            },
+            "objectID": "nZqIUKyoBelvbSn1g"
+        },
+        {
+            "title": "Advanced Search TikTok API (free-watermark videos)",
+            "name": "advanced-search-tiktok-api",
+            "username": "novi",
+            "stats": {
+                "totalBuilds": 75,
+                "totalRuns": 6347204,
+                "totalUsers": 56737,
+                "totalUsers7Days": 63,
+                "totalUsers30Days": 132,
+                "totalUsers90Days": 216,
+                "lastRunStartedAt": "2026-11-02T10:19:24.998Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 1,
+                    "FAILED": 140,
+                    "SUCCEEDED": 151082,
+                    "TIMED-OUT": 1,
+                    "TOTAL": 151224
+                },
+                "actorReviewCount": 2,
+                "actorReviewRating": 1.172123104032402,
+                "bookmarkCount": 32
+            },
+            "description": "TikTok Search Scraper - Explore, discover, and analyze TikTok content with ease. Gain valuable insights and optimize your marketing efforts. Provides no-watermark download link.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "VIDEOS",
+                "LEAD_GENERATION"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/sKsmPadCt6s5fagAi-actor-EJZ8mq5cvkgS5nVs5-d8apeqHeLV-Gemini_Generated_Image_a8cv8pa8cv8pa8cv.png",
+            "notice": "NONE",
+            "userFullName": "Novi",
+            "userPictureUrl": "https://images.apifyusercontent.com/3Ipzu3zWhKrAcjcsicovSNtsj0qQ1uZMXlSu345zbl4/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vc0tzbVBhZEN0NnM1ZmFnQWktcHJvZmlsZS0xYTg5WWwwZE9DLUdlbWluaV9HZW5lcmF0ZWRfSW1hZ2VfbnRxdGt2bnRxdGt2bnRxdC5qcGVn.jpeg",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": 4,
+                "isPPEPlatformUsagePaidByUser": true,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "apify-default-dataset-item": {
+                            "eventTitle": "Result",
+                            "eventDescription": "Deprecated",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0004
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00037
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00033
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0003
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "result-item": {
+                            "eventTitle": "Scraped Result",
+                            "eventDescription": "Scraped Result during the run",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0004
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00037
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00033
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0003
+                                }
+                            }
+                        },
+                        "query-level1": {
+                            "eventTitle": "Less Result Query",
+                            "eventDescription": "Less Result Query such as filter yesterday videos",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0025
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00233
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00217
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.002
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.002
+                                }
+                            }
+                        },
+                        "user-bio-lookup": {
+                            "eventTitle": "Get User",
+                            "eventDescription": "Get user details",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.006
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00567
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00533
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.005
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.005
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.005
+                                }
+                            }
+                        },
+                        "apify-actor-start": {
+                            "eventTitle": "Actor Start",
+                            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                            "isOneTimeEvent": true,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.00023
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00022
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00021
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0002
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0002
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0002
+                                }
+                            }
+                        }
+                    }
+                },
+                "startedAt": "2026-09-07T03:10:16.284Z",
+                "createdAt": "2026-09-07T03:10:17.071Z",
+                "apifyMarginPercentage": 0.2
+            },
+            "objectID": "EJZ8mq5cvkgS5nVs5"
+        },
+        {
+            "title": "Ultimate TikTok Scraper (no-limit)",
+            "name": "tiktok-scraper-ultimate",
+            "username": "novi",
+            "stats": {
+                "totalBuilds": 53,
+                "totalRuns": 634659,
+                "totalUsers": 823,
+                "totalUsers7Days": 37,
+                "totalUsers30Days": 77,
+                "totalUsers90Days": 181,
+                "lastRunStartedAt": "2026-11-02T10:21:21.025Z",
+                "publicActorRunStats30Days": {
+                    "ABORTED": 5,
+                    "FAILED": 0,
+                    "SUCCEEDED": 211903,
+                    "TIMED-OUT": 41,
+                    "TOTAL": 211949
+                },
+                "actorReviewCount": 3,
+                "actorReviewRating": 5,
+                "bookmarkCount": 22
+            },
+            "description": "Scrape TikTok profiles, videos, and hashtags to extract key data. Use search queries or direct URLs to gather post details, shares, hearts, followers, music data, and user info.",
+            "categories": [
+                "SOCIAL_MEDIA",
+                "LEAD_GENERATION",
+                "VIDEOS"
+            ],
+            "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/sKsmPadCt6s5fagAi-actor-VDFct6Acrk3b5yjVa-x3WVoGkjfU-Gemini_Generated_Image_a8cv8pa8cv8pa8cv.png",
+            "notice": "NONE",
+            "userFullName": "Novi",
+            "userPictureUrl": "https://images.apifyusercontent.com/3Ipzu3zWhKrAcjcsicovSNtsj0qQ1uZMXlSu345zbl4/rs:fill:32:32/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vc0tzbVBhZEN0NnM1ZmFnQWktcHJvZmlsZS0xYTg5WWwwZE9DLUdlbWluaV9HZW5lcmF0ZWRfSW1hZ2VfbnRxdGt2bnRxdGt2bnRxdC5qcGVn.jpeg",
+            "currentPricingInfo": {
+                "minimalMaxTotalChargeUsd": 2,
+                "pricingModel": "PAY_PER_EVENT",
+                "isPriceChangeNotificationSuppressed": false,
+                "pricingPerEvent": {
+                    "actorChargeEvents": {
+                        "result-item": {
+                            "eventTitle": "Each video",
+                            "eventDescription": "Cost for each video. Super cheap!",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0003
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00029
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00029
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.00028
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.00028
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.00028
+                                }
+                            },
+                            "isPrimaryEvent": true
+                        },
+                        "start": {
+                            "eventTitle": "Actor Start",
+                            "eventDescription": "Actor start. To save cost, please scrape more result.",
+                            "isOneTimeEvent": true,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.0002
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.00017
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.00013
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0001
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0001
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0001
+                                }
+                            }
+                        },
+                        "single-video-query": {
+                            "eventTitle": "Special Query",
+                            "eventDescription": "Charged when query special data. Such as: Single video, get user page...",
+                            "isOneTimeEvent": false,
+                            "eventTieredPricingUsd": {
+                                "FREE": {
+                                    "tieredEventPriceUsd": 0.003
+                                },
+                                "BRONZE": {
+                                    "tieredEventPriceUsd": 0.0022
+                                },
+                                "SILVER": {
+                                    "tieredEventPriceUsd": 0.0014
+                                },
+                                "GOLD": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "PLATINUM": {
+                                    "tieredEventPriceUsd": 0.0006
+                                },
+                                "DIAMOND": {
+                                    "tieredEventPriceUsd": 0.0006
+                                }
+                            }
+                        }
+                    }
+                },
+                "startedAt": "2026-08-16T17:05:07.571Z",
+                "createdAt": "2026-08-16T17:05:08.254Z",
+                "apifyMarginPercentage": 0.2,
+                "notifiedAboutChangeAt": "2026-08-19T08:06:25.677Z"
+            },
+            "objectID": "VDFct6Acrk3b5yjVa"
+        }
+    ]
+}
